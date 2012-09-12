@@ -24,6 +24,9 @@
 
 /* Begin PBXBuildFile section */
 		19A62264151B899D00207192 /* Galaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A62263151B899C00207192 /* Galaxy.m */; };
+		41F2B46116003A2700CA16CA /* KWStringContainsMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = C922D1D71580438300995B43 /* KWStringContainsMatcher.h */; };
+		41F2B46316003A3300CA16CA /* KWStringPrefixMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A3A1754212E496CA004DFD70 /* KWStringPrefixMatcher.h */; };
+		41F2B46416003F5500CA16CA /* KWHaveValueMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A352E9E912EDC33C0049C691 /* KWHaveValueMatcher.h */; };
 		4B45D6BD1548765800793B1E /* KWCaptureSpy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B45D6BB1548765800793B1E /* KWCaptureSpy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B45D6BE1548765800793B1E /* KWCaptureSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45D6BC1548765800793B1E /* KWCaptureSpy.m */; };
 		4B9D040814D3EE7300707E83 /* KWExampleGroupDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A3758CDA1418CDC10051268A /* KWExampleGroupDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,7 +80,6 @@
 		6BC17EF7155E3ACA000B3AA4 /* KWReceiveMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F57A6784115A2BC800591C2A /* KWReceiveMatcher.h */; };
 		6BC17EF8155E3ACA000B3AA4 /* KWRespondToSelectorMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F553B6721175ED09004FCA2E /* KWRespondToSelectorMatcher.h */; };
 		6BC17EF9155E3ACA000B3AA4 /* KWBeNonNilMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A3A1757512E498D8004DFD70 /* KWBeNonNilMatcher.h */; };
-		6BC17EFA155E3ACA000B3AA4 /* KWHaveValueMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A352E9E912EDC33C0049C691 /* KWHaveValueMatcher.h */; };
 		6BC17EFB155E3ACA000B3AA4 /* KWHamcrestMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A352EA1712EDC8160049C691 /* KWHamcrestMatcher.h */; };
 		6BC17EFC155E3ACA000B3AA4 /* KWUserDefinedMatcher.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A385CAE913AA7ED800DCA951 /* KWUserDefinedMatcher.h */; };
 		6BC17EFD155E3ACA000B3AA4 /* KWMatchers.h in Copy Files */ = {isa = PBXBuildFile; fileRef = A385CAED13AAC9B600DCA951 /* KWMatchers.h */; };
@@ -563,9 +565,7 @@
 				6BC17EF7155E3ACA000B3AA4 /* KWReceiveMatcher.h in Copy Files */,
 				6BC17EF8155E3ACA000B3AA4 /* KWRespondToSelectorMatcher.h in Copy Files */,
 				6BC17EF9155E3ACA000B3AA4 /* KWBeNonNilMatcher.h in Copy Files */,
-				6BC17EFA155E3ACA000B3AA4 /* KWHaveValueMatcher.h in Copy Files */,
 				6BC17EFB155E3ACA000B3AA4 /* KWHamcrestMatcher.h in Copy Files */,
-				6BC17EFC155E3ACA000B3AA4 /* KWUserDefinedMatcher.h in Copy Files */,
 				6BC17EFD155E3ACA000B3AA4 /* KWMatchers.h in Copy Files */,
 				6BC17EFE155E3ACA000B3AA4 /* KWIntercept.h in Copy Files */,
 				6BC17EFF155E3ACA000B3AA4 /* KWMessageSpying.h in Copy Files */,
@@ -586,6 +586,7 @@
 				6BC17F0E155E3ACA000B3AA4 /* KWInvocationCapturer.h in Copy Files */,
 				6BC17F0F155E3ACA000B3AA4 /* KWMessagePattern.h in Copy Files */,
 				6BC17F10155E3ACA000B3AA4 /* KWNull.h in Copy Files */,
+				6BC17EFC155E3ACA000B3AA4 /* KWUserDefinedMatcher.h in Copy Files */,
 				6BC17F11155E3ACA000B3AA4 /* KWObjCUtilities.h in Copy Files */,
 				6BC17F12155E3ACA000B3AA4 /* KWProbe.h in Copy Files */,
 				6BC17F13155E3ACA000B3AA4 /* KWProbePoller.h in Copy Files */,
@@ -602,6 +603,9 @@
 				6BC17F1E155E3ACA000B3AA4 /* KiwiConfiguration.h in Copy Files */,
 				6BC17F1F155E3ACA000B3AA4 /* KiwiMacros.h in Copy Files */,
 				6BC17F20155E3ACA000B3AA4 /* KiwiBlockMacros.h in Copy Files */,
+				41F2B46116003A2700CA16CA /* KWStringContainsMatcher.h in Copy Files */,
+				41F2B46316003A3300CA16CA /* KWStringPrefixMatcher.h in Copy Files */,
+				41F2B46416003F5500CA16CA /* KWHaveValueMatcher.h in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1663,7 +1667,7 @@
 		};
 		6BC17EC9155E3A84000B3AA4 /* Assemble Framework */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -1674,6 +1678,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Resources\" &&\n\n# Generate universal binary from desktop, device, and simulator builds.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\ncp \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}/Versions/A\" &&\nln -s \"A\" \"${FRAMEWORK}/Versions/Current\" &&\nln -s \"Versions/Current/Headers\" \"${FRAMEWORK}/Headers\" &&\nln -s \"Versions/Current/Resources\" \"${FRAMEWORK}/Resources\" &&\nln -s \"Versions/Current/${PRODUCT_NAME}\" \"${FRAMEWORK}/${PRODUCT_NAME}\" &&\ncp \"${SRCROOT}/Resources/KiwiDriver-Info.plist\" \"${FRAMEWORK}/Resources/Info.plist\"";
+			showEnvVarsInLog = 0;
 		};
 		A3B16540139967B800E9CC6E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1953,6 +1958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Kiwi/**";
 			};
 			name = Debug;
 		};
@@ -1960,6 +1966,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Kiwi/**";
 			};
 			name = Release;
 		};
